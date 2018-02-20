@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
+import Photos
+import Speech
+
 
 class ViewController: UIViewController {
 
@@ -17,6 +21,57 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 	}
+	
+	func requestPhotoPermissions() {
+		
+		PHPhotoLibrary.requestAuthorization { [unowned self]
+			authStatus in
+			
+			DispatchQueue.main.async {
+				if authStatus == .authorized {
+					self.requestPhotoPermissions()
+				} else {
+					self.helpLabel.text = "Photos permissions declined, please enable it in settings then tap continue again"
+				}
+			}
+		}
+	}
+	
+	func requestRecordPermissions() {
+		
+		AVAudioSession.sharedInstance().requestRecordPermission() { [unowned self] allowed in
+			
+			DispatchQueue.main.async {
+				if allowed {
+					
+					self.requestTranscribePermissions()
+				} else {
+					self.helpLabel.text = "Recording permissions declined, please enable it in settings then tap continue again"
+				}
+			}
+		}
+	}
+	
+	func requestTranscribePermissions() {
+		
+		SFSpeechRecognizer.requestAuthorization { [unowned self ] authStatus in
+			
+			DispatchQueue.main.async {
+				if authStatus == .authorized {
+					self.authorizationComplete()
+					
+				} else {
+					self.helpLabel.text = "Transcription permissions declined, please enable it in settings then tap continue again"
+				}
+			}
+		}
+	}
+		
+	func authorizationComplete() {
+			
+		dismiss(animated: true)
+			
+	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -24,6 +79,8 @@ class ViewController: UIViewController {
 	}
 
 	@IBAction func requestPermissions(_ sender: Any) {
+		
+		requestPhotoPermissions()
 	}
 	
 }

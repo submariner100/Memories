@@ -5,6 +5,6 @@ the picture was taken. Also we are going to add Spotlight search for the voice r
 firstcommit - setting up the UX interface the main ViewController asking for permissions access the voice recognition/camera and recording 
 features of the users iPhone
 secondcommit - Collection view set up for the images the user will be taking.
-thirdcommit - cell file, collection view file and all the outlets and actions added.
+thirdcommit - cell file, collection view file and all the outlets and actions added. Methods added for photos/speech/transcribe permissions.
 
 

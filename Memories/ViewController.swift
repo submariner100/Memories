@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 			
 			DispatchQueue.main.async {
 				if authStatus == .authorized {
-					self.requestPhotoPermissions()
+					self.requestRecordPermissions()
 				} else {
 					self.helpLabel.text = "Photos permissions declined, please enable it in settings then tap continue again"
 				}

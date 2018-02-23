@@ -23,7 +23,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-Zg-TGv">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="167.5"/>
-                                        <string key="text">In order to work fully, Memories needs to read your photo library, record your voice, and transcribe what you said. When you click the button below you will be asked to grant those perrmissions, but you can change your mind later in Settings.</string>
+                                        <string key="text">In order to work fully, Memories needs to read your photo library, record your voice, and transcribe what you said. When you click the button below you will be asked to grant those permissions, but you can change your mind later in Settings.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

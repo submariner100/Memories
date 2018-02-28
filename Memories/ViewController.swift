@@ -13,6 +13,8 @@ import Speech
 
 
 class ViewController: UIViewController {
+	
+	var searchMode: Bool!
 
 	@IBOutlet weak var helpLabel: UILabel!
 	
@@ -83,5 +85,24 @@ class ViewController: UIViewController {
 		requestPhotoPermissions()
 	}
 	
+	func searchBar(searchBar: UISearchBar, textDidChange text: String) {
+		
+		if searchBar.text == nil || searchBar.text == "" {
+			searchMode = false
+			view.endEditing(true)
+			
+		} else {
+			
+			searchMode = true
+			_ = "contentDescription == \"*\(text)*\"c"
+			searchBarSearchButtonClicked(searchBar: searchBar)
+		}
+	}
+	func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+		searchBar.resignFirstResponder()
+		view.endEditing(false)
+		
+	}
+
 }
 

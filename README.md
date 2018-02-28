@@ -9,5 +9,7 @@ thirdcommit - cell file, collection view file and all the outlets and actions ad
 fouthcommit - methods set up for the UIImagePicker and UICollectionView to add photos into memory and resizing to thumbnails.
 fifthcommit - Setting up the transcribe, record methods. 
 sixthcommit - added functionality for recording and placing the recording message into memory. 
+seventhcommit - added functionality to the searchBar for when text has change and searchBarButtonClicked using the SpotLight framework
+This Application is now finished and tweaks will be added later.
 
 

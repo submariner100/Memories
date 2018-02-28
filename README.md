@@ -8,5 +8,6 @@ secondcommit - Collection view set up for the images the user will be taking.
 thirdcommit - cell file, collection view file and all the outlets and actions added. Methods added for photos/speech/transcribe permissions.
 fouthcommit - methods set up for the UIImagePicker and UICollectionView to add photos into memory and resizing to thumbnails.
 fifthcommit - Setting up the transcribe, record methods. 
+sixthcommit - added functionality for recording and placing the recording message into memory. 
 
 
